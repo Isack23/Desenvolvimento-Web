@@ -1,0 +1,15 @@
+body{
+    background: rgb(31, 168, 168);
+    font: normal 15px arial;
+    color: rgb(0, 0, 0);
+    
+}
+h1{
+    font: normal 40px arial;
+    margin-top: 50px;
+    
+}
+p{
+    font: normal 25px arial;
+    color: black;   
+}
