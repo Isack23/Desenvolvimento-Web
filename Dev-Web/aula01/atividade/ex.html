@@ -1,0 +1,54 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muda cores</title>
+    <style>
+        body{
+            background: tomato;
+            color: white;
+            font-size: 1.2em;
+            font-family: helvetica, sans-serif;
+        }
+        .content{
+            max-width: 960px;
+            margin: 50px auto;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        div input{
+            flex: 1;
+            font-size: 1em;
+            padding: 5px;
+        }
+
+        div button{
+            flex: 1;
+        }
+
+    </style>
+</head>
+<body id="meufundo">  
+
+    <h1>INSIRA A COR DE FUNDO QUE VOCÊ DESEJA</h1>
+
+    <form action=""> 
+        <input type="text" id="bgcolor">
+        <!-- Ao clicar puxa a função trocarcor() -->
+        <input type="button" value="TROCAR" onclick="trocarcor()"> 
+    </form>
+
+    <p id="cor_escolhida"></p>
+
+    <script>
+        function trocarcor() {
+            //Seleciona o elemento do seletor de cores, pega o seu valor e registra em uma variável.
+            let Cor =  document.querySelector('#bgcolor').value;
+             //Seleciona o elemento ID em que a cor deve ser trocada, entra no estilho e altera o background para cor inserida e adquirada, através do value anterior.
+            document.getElementById('meufundo').style.backgroundColor = Cor;
+            //Mostra na tela qual foi a cor escolhida
+            document.getElementById('cor_escolhida').innerHTML = `A cor escolhida foi ${Cor}`;
+        }
+    </script>
+
+</body>
